@@ -1,6 +1,5 @@
 .row {
   max-width: $grid-width;
-
   margin: 0 auto;
 
   &:not(:last-child) {
@@ -8,7 +7,7 @@
   }
   @include clearfix;
 
-  //select all clases start whith col-
+  //select all clases start whithin col-
   [class^="col-"]{
 
     float: left;
@@ -26,7 +25,7 @@
   .col-1-of-4{
     width: calc((100% - 3 * #{$gutter-horizontal}) / 4);
   }
-  .col-1-of-3{
-    width: calc((100% - 3 *#{$gutter-horizontal})/ 3);
+  .col-1-of-3 {
+    width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
   }
 }
