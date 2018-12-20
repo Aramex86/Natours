@@ -11,3 +11,40 @@
   left: 50%;
   transform: translate(-50%,-50%);
 }
+
+//Media Query Manager
+/*
+0-600px: phone;
+600-900px:tablel portrait;
+600-1200px:tablel landscape;
+[1200 - 1800] is where normal style apply
+1800px + :big desktop;
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+$breakpoint argument choises:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+1em = 16px
+*/
+@mixin respond($breakepoit){
+  @if $breakepoit == phone{
+    @media (max-width: 37.5em){@content}; //600px
+  }
+  @if $breakepoit == tab-port{
+    @media (max-width: 56.25em){@content}; //900px
+  }
+  @if $breakepoit == tab-land{
+    @media (max-width: 75em){@content}; //1200px
+  }
+  @if $breakepoit == big-desktop{
+    @media (min-width: 112.5em){@content}; //1800px
+  }
+
+
+
+
+}

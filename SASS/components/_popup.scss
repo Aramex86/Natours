@@ -18,9 +18,9 @@
     color: $color-primary;
   }
 
-}
 
-&__content {
+
+  &__content {
   @include absCenter;
   width: 75%;
   background-color: $color-white;
@@ -31,6 +31,12 @@
   opacity: 0;
   transform: translate(-50%, -50%) scale(.5);
   transition: all .4s .2s;
+    @include  respond(tab-port){
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+
+    }
 
 }
 
@@ -43,6 +49,16 @@
 &__left {
   width: 33.333%;
   display: table-cell;
+  @include  respond(tab-port){
+    width: 100%;
+    display: flex;
+    height: 38rem;
+    justify-content: center;
+    padding: 4rem  2rem 0 2rem;
+  }
+  @include respond(phone){
+    height: 28rem;
+  }
 }
 
 &__right {
@@ -50,11 +66,21 @@
   display: table-cell;
   vertical-align: middle;
   padding: 3rem 5rem;
+  @include  respond(tab-port){
+    width: 100%;
+    padding: 3rem 7rem;
+
+  }
 }
 
 &__img {
   display: block;
   width: 100%;
+  @include  respond(tab-port){
+    width: 45%;
+
+
+  }
 }
 
 &__text {
@@ -69,6 +95,10 @@
   -webkit-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
+  @include respond(tab-port){
+    margin-bottom: 2rem;
+    column-count: 1;
+  }
 }
 
 &__close {
@@ -83,6 +113,17 @@
     transition: all .2s;
     font-size: 3rem;
     line-height: 1;
+    @include respond(phone){
+      color: #000;
+      position: absolute;
+      top: 0.8rem;
+      right: 1.8rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: all .2s;
+      font-size: 4rem;
+      line-height: 1;
+    }
   }
-
+}
 }
