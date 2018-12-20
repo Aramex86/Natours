@@ -624,7 +624,7 @@ body {
         padding: 4rem  2rem 0 2rem; } }
     @media (max-width: 37.5em) {
       .popup__left {
-        height: 28rem; } }
+        height: 20rem; } }
   .popup__right {
     width: 66.666%;
     display: table-cell;
