@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/icon-font.css">
+   <!-- <link rel="stylesheet" href="css/icon-font.css">-->
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" type="image/png" href="images/favicon.png">
 
@@ -65,24 +64,24 @@
                 <!--responsive images-->
                     <img srcset="images/nat-1.jpg 300w,
                      images/nat-1-large.jpg 1000w"
-                         sizes="(max-width:900px) 20vw,
-                         (max-width:600px) 30vw,300px)"
+                         sizes="(max-width:56.25em) 20vw,
+                         (max-width:37.5em) 30vw,300px)"
                          alt="Photo 1"
                          class="composition__photo  composition__photo--p1"
                     src="images/nat-1-large.jpg">
 
                     <img srcset="images/nat-2.jpg 300w,
                      images/nat-2-large.jpg 1000w"
-                         sizes="(max-width:900px) 20vw)
-                         (max-width:600px) 30vw,300px)"
+                         sizes="(max-width:56.25em) 20vw)
+                         (max-width:37.5em) 30vw,300px)"
                          alt="Photo 2"
                          class="composition__photo  composition__photo--p2"
                          src="images/nat-2-large.jpg">
 
                     <img srcset="images/nat-3.jpg 300w,
                      images/nat-3-large.jpg 1000w"
-                         sizes="(max-width:900px) 20vw,
-                         (max-width:600px) 30vw,300px)"
+                         sizes="(max-width:56.25em) 20vw,
+                         (max-width:37.5em) 30vw,300px)"
                          alt="Photo 3"
                          class="composition__photo  composition__photo--p3"
                          src="images/nat-3-large.jpg">
@@ -271,7 +270,8 @@
         <div class="row">
             <div class="story">
                 <figure class="story__shape">
-                    <img src="images/nat-8.jpg" alt="Person on a tour" class="story__image">
+                    <img srcset="images/nat-8.jpg 2000w ,images/nat-8-small.jpg 300w" sizes="(max-width:56.25em) 30vw,(max-width:37.5em) 42vw, 300px" alt="Person on a tour" class="story__image" src="images/nat-8.jpg">
+                    <!--<img src="images/nat-8.jpg" alt="Person on a tour" class="story__image">-->
                     <figcaption class="story__caption">
                         Mary Smith
                     </figcaption>
@@ -292,7 +292,8 @@
         <div class="row">
             <div class="story">
                 <figure class="story__shape">
-                    <img src="images/nat-9.jpg" alt="Person on a tour" class="story__image">
+                    <img srcset="images/nat-9.jpg 2000w ,images/nat-9-small.jpg 300w" sizes="(max-width:56.25em) 30vw,(max-width:37.5em) 42vw, 300px" alt="Person on a tour" class="story__image" src="images/nat-9.jpg">
+                    <!--<img src="images/nat-9.jpg" alt="Person on a tour" class="story__image">-->
                     <figcaption class="story__caption">
                         Jack Wilson
                     </figcaption>
@@ -336,7 +337,6 @@
                             <input type="text" class="form__input" placeholder="Full Name" id="name" required>
                             <label for="name" class="form__label">Full Name</label>
                         </div>
-
                         <div class="form__group">
                             <input type="email" class="form__input" placeholder="Email address" id="email" required>
                             <label for="email" class="form__label">Email address</label>

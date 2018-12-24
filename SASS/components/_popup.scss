@@ -9,121 +9,120 @@
   opacity: 0;
   visibility: hidden;
   transition: all .3s;
+  @supports ( -webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba($color-gray-3, .3);
+  }
+
   &:target {
     opacity: 1;
     visibility: visible;
   }
 
-  &:hover {
-    color: $color-primary;
-  }
-
-
-
   &__content {
-  @include absCenter;
-  width: 75%;
-  background-color: $color-white;
-  box-shadow: 0 2rem 4rem rgba($color-black, .2);
-  border-radius: 3px;
-  display: table-cell;
-  overflow: hidden;
-  opacity: 0;
-  transform: translate(-50%, -50%) scale(.5);
-  transition: all .4s .2s;
-    @include  respond(tab-port){
+    @include absCenter;
+    width: 75%;
+    background-color: $color-white;
+    box-shadow: 0 2rem 4rem rgba($color-black, .2);
+    border-radius: 3px;
+    display: table-cell;
+    overflow: hidden;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(.5);
+    transition: all .4s .2s;
+    @include respond(tab-port) {
       width: 90%;
       display: flex;
       flex-direction: column;
 
     }
 
-}
+  }
 
-&:target &__content {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
+  &:target &__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
 
-}
+  }
 
-&__left {
-  width: 33.333%;
-  display: table-cell;
-  @include  respond(tab-port){
+  &__left {
+    width: 33.333%;
+    display: table-cell;
+    @include respond(tab-port) {
+      width: 100%;
+      display: flex;
+      height: 38rem;
+      justify-content: center;
+      padding: 4rem 2rem 0 2rem;
+    }
+    @include respond(phone) {
+      height: 20rem;
+    }
+  }
+
+  &__right {
+    width: 66.666%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 3rem 5rem;
+    @include respond(tab-port) {
+      width: 100%;
+      padding: 3rem 7rem;
+
+    }
+  }
+
+  &__img {
+    display: block;
     width: 100%;
-    display: flex;
-    height: 38rem;
-    justify-content: center;
-    padding: 4rem  2rem 0 2rem;
+    @include respond(tab-port) {
+      width: 45%;
+
+    }
   }
-  @include respond(phone){
-    height: 20rem;
+
+  &__text {
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
+
+    column-count: 2;
+    column-gap: 4rem;
+    column-rule: 1px solid $color-gray-2;
+
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    @include respond(tab-port) {
+      margin-bottom: 2rem;
+      column-count: 1;
+    }
   }
-}
 
-&__right {
-  width: 66.666%;
-  display: table-cell;
-  vertical-align: middle;
-  padding: 3rem 5rem;
-  @include  respond(tab-port){
-    width: 100%;
-    padding: 3rem 7rem;
-
-  }
-}
-
-&__img {
-  display: block;
-  width: 100%;
-  @include  respond(tab-port){
-    width: 45%;
-
-
-  }
-}
-
-&__text {
-  font-size: 1.4rem;
-  margin-bottom: 4rem;
-
-  column-count: 2;
-  column-gap: 4rem;
-  column-rule: 1px solid $color-gray-2;
-
-  -moz-hyphens: auto;
-  -webkit-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
-  @include respond(tab-port){
-    margin-bottom: 2rem;
-    column-count: 1;
-  }
-}
-
-&__close {
-  &:link,
-  &:visited {
-    color: $color-black;
-    position: absolute;
-    top: 2.5rem;
-    right: 2.5rem;
-    text-decoration: none;
-    display: inline-block;
-    transition: all .2s;
-    font-size: 3rem;
-    line-height: 1;
-    @include respond(phone){
-      color: #000;
+  &__close {
+    &:link,
+    &:visited {
+      color: $color-black;
       position: absolute;
-      top: 0.8rem;
-      right: 1.8rem;
+      top: 2.5rem;
+      right: 2.5rem;
       text-decoration: none;
       display: inline-block;
       transition: all .2s;
-      font-size: 4rem;
+      font-size: 3rem;
       line-height: 1;
+      @include respond(phone) {
+        color: #000;
+        position: absolute;
+        top: 0.8rem;
+        right: 1.8rem;
+        text-decoration: none;
+        display: inline-block;
+        transition: all .2s;
+        font-size: 4rem;
+        line-height: 1;
+      }
     }
   }
-}
 }
