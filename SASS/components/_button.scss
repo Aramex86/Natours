@@ -14,7 +14,18 @@
     //Change for the button element
     border: none;
     cursor: pointer;
-
+  @include respond(phone){
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.3rem 2rem;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s ease-out;
+    position: relative;
+    font-size: 1.4rem;
+    border: none;
+    cursor: pointer;
+  }
 
   }
   &:hover{
